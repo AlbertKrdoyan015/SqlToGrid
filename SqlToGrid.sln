@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30907.101
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SqlToGrid", "SqlToGrid.csproj", "{1EAEBE66-8CEA-4165-87D4-D7C76332A107}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1EAEBE66-8CEA-4165-87D4-D7C76332A107}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1EAEBE66-8CEA-4165-87D4-D7C76332A107}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1EAEBE66-8CEA-4165-87D4-D7C76332A107}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1EAEBE66-8CEA-4165-87D4-D7C76332A107}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {29EC10F4-4185-467A-8F18-F69DA0B97BE7}
+	EndGlobalSection
+EndGlobal
