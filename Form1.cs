@@ -25,25 +25,44 @@ namespace SqlToGrid
             MySqlConnection sc = new MySqlConnection(connectionString);
             sc.Open();
 
-            string command = "select * from table1";
+            string command = "desc table1";
             MySqlCommand comm = new MySqlCommand(command, sc);
             MySqlDataReader reader = comm.ExecuteReader();
 
-            string out_put = "";
+       //     string out_put = "";
+
+            this.Width = 800;
+            this.Height = 450;
+            dataGridView1.Width = 50;
+
+            int _i = 0;
+            while (reader.Read())
+            {
+                dataGridView1.Columns.Add("string", reader.GetValue(0).ToString());
+                dataGridView1.Width += dataGridView1.Columns[_i++].Width;
+            }
+
+            reader.Close();
+            comm.Dispose();
+
+            command = "select * from table1";
+            comm = new MySqlCommand(command, sc);
+            reader = comm.ExecuteReader();
 
             while (reader.Read())
             {
+                string[] list = new string[dataGridView1.ColumnCount];
+                
                 for (int i = 0; i < reader.FieldCount; ++i)
                 {
-                    out_put += (reader.GetValue(i) + " ");
+                    list[i] = reader.GetValue(i).ToString();
                 }
-                out_put += "\n";
+
+                dataGridView1.Rows.Add(list);
             }
 
-            //            MessageBox.Show(out_put);
+           // MessageBox.Show(out_put);
             // https://webphpmyadmin.com/sql.php?server=1&db=GuiiqZpv0C&table=table1&pos=0
-
-            label1.Text = out_put;
 
             reader.Close();
             comm.Dispose();
