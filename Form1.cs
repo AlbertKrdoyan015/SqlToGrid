@@ -35,6 +35,14 @@ namespace SqlToGrid
             this.Height = 450;
             dataGridView1.Width = 50;
 
+            dataGridView1 = new DataGridView();
+            this.dataGridView1.Location = new System.Drawing.Point(13, 42);
+            this.dataGridView1.Size = new System.Drawing.Size(240, 150);
+            this.dataGridView1.TabIndex = 1;
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+          this.SuspendLayout();//???
+            this.Controls.Add(dataGridView1);
+
             int _i = 0;
             while (reader.Read())
             {
